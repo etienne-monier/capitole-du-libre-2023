@@ -6,4 +6,4 @@ Celle-ci avait pour sujet le projet [L'air du bois](https://www.lairdubois.fr/).
 
 Pour générer le pdf, LaTeX doit être installé. Ensuite lancer `make main.pdf`.
 
-Ce code est distribué sous license
+Ce code est distribué sous license GNU General Public License v3.0.
