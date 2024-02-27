@@ -1,0 +1,89 @@
+\documentclass[14pt]{beamer}
+
+\usepackage[absolute,overlay]{textpos}
+
+%
+% STYLE
+%
+\AtBeginSection{%
+  \begin{frame}
+    \sectionpage
+  \end{frame}
+}
+
+\usepackage[inline]{enumitem}
+
+\setlist*[itemize]{
+    label={-},
+    font={},
+    leftmargin=*
+}
+
+
+\setbeamertemplate{section page}{
+  \begin{center}
+    \includegraphics[width=6cm]{img/logo.png}
+
+    \vspace{1cm}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{center}
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{footline}[frame number]
+
+\setbeamerfont{title}{size=\large}
+
+\makeatletter
+\setbeamertemplate{title page}{
+  \vbox{}
+  \vfill
+  \begingroup
+    \centering
+    \includegraphics[width=6cm]{img/logo.png}
+    \vskip2em\par
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip2em\par
+    \begin{minipage}{0.4\textwidth}
+      \includegraphics[width=4cm]{img/capitole_du_libre_logo.png}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+      \begin{beamercolorbox}[sep=8pt,center]{author}
+        \usebeamerfont{author}\insertauthor
+      \end{beamercolorbox}
+      \begin{beamercolorbox}[sep=8pt,center]{date}
+        \usebeamerfont{date}\insertdate
+      \end{beamercolorbox}
+    \end{minipage}
+    {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+  \endgroup
+  \vfill
+}
+\makeatother
+
+%
+% COLORS
+%
+\usepackage[]{xcolor}
+
+\definecolor{background}{HTML}{3f3c35}
+\definecolor{normal-text}{HTML}{fefdf9}
+\definecolor{accent}{HTML}{f77f00}
+
+\setbeamercolor{background canvas}{bg=background}
+\setbeamercolor{normal text}{fg=normal-text}
+\setbeamercolor{titlelike}{fg=normal-text}
+
+\renewcommand{\emph}[1]{\textcolor{accent}{#1}}
+
+%
+% FONTS
+%
+\usepackage{fontspec}
+\setmainfont{monofur}
+\setsansfont{monofur}
+\setmonofont{monofur}
+
